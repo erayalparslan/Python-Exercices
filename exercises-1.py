@@ -113,3 +113,23 @@ def sumOfOddSquares(n):
 
 ##############################################################################
 
+
+"""
+    Give a single command that computes the sum from Exercise R-1.6, 
+    relying on Python’s comprehension syntax and the built-in sum function
+"""
+
+
+def sumOfOddSquaresWithSingleCommand(n):
+    if n <= -1:
+        print('input must be positive')
+    else:
+        return (sum(x*x for x in range(1,n) if x % 2 == 1))
+        
+        
+# print(sumOfOddSquaresWithSingleCommand(4))
+
+
+##############################################################################
+
+
