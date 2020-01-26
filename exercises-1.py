@@ -206,3 +206,27 @@ secondList = [1,2,3,4,5]
 
 
 ##############################################################################
+
+
+"""
+    Give an example of a Python code fragment that attempts to write an element to a list based on an index that may be out of bounds. 
+    If that index is out of bounds, the program should catch the exception that results, and print the following error message:
+    “Don’t try buffer overflow attacks in Python!”
+"""
+
+
+def arrayIndexHandler(array, index, value = 100):
+    try:
+        array[index] = value
+        print('{} is set at the given index'.format(value))
+    except IndexError as e:
+        print("Don't try buffer overflow attacks in Python!")
+        
+        
+# arrayIndexHandler([34,33,44,66,545,7878,121,22,33,44], 3)
+# arrayIndexHandler([34,33,44,66,545,7878,121,22,33,44], 30)
+
+
+##############################################################################
+
+
