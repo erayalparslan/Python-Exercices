@@ -152,3 +152,57 @@ def printAllEnglishLetters():
 ##############################################################################
 
 
+"""
+    Write a Python program that repeatedly reads lines from standard input
+    until an EOFError is raised, and then outputs those lines in reverse order
+    (a user can indicate end of input by typing ctrl-D).
+"""
+
+
+def read_file(filepath):
+    fp = open(filepath)
+    lines = []
+    
+    while True:
+        try:
+            line = fp.readline()
+            if line == '': 
+                raise EOFError
+            else:
+                lines.append(line[:-1])
+        except EOFError:
+            for line in lines.reversed():
+                print(line)
+            return
+        
+        
+##############################################################################
+
+
+"""
+    Write a short Python program that takes two arrays a and b of length n
+    storing int values, and returns the dot product of a and b. That is, it returns
+    an array c of length n such that c[i] = a[i] · b[i], for i = 0,...,n−1.
+"""
+
+
+def product(firstList, secondList):
+    if not isinstance(firstList, list) or not isinstance(secondList, list):
+        print('input(s) are not list')
+    elif len(firstList) != len(secondList):
+        print('lengths of the lists do not match!')
+    else:
+        length = len(firstList)
+        newList = []
+        for i in range(length):
+            newList.append(firstList[i]*secondList[i])
+        return newList
+    
+
+firstList  = [10,20,30,40,50]
+secondList = [1,2,3,4,5]
+
+# print(product(firstList, secondList))
+
+
+##############################################################################
