@@ -90,3 +90,26 @@ def sumsquares(n):
 
 ##############################################################################
 
+
+"""
+    Write a short Python function that takes a positive integer n and returns
+    the sum of the squares of all the odd positive integers smaller than n.
+"""
+
+
+def sumOfOddSquares(n):
+    if n <= -1:
+        print('input must be positive')
+    else:
+        total = 0
+        for i in range(1,n):
+            if i % 2 == 1:
+                total += i*i
+        return total
+        
+        
+# print(sumOfOddSquares(4))
+
+
+##############################################################################
+
