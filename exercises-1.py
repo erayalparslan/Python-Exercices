@@ -35,3 +35,37 @@ def is_even(k):
 # print is_even(23)
 # print is_even(22)
 
+
+##############################################################################
+
+
+"""
+    Write a short Python function, minmax(data), that takes a sequence of
+    one or more numbers, and returns the smallest and largest numbers, in the
+    form of a tuple of length two. Do not use the built-in functions min or
+    max in implementing your solution
+"""
+
+
+def minmax(data):
+    if len(data) < 1:
+        print('your list is empty')
+        return(None,None)
+    else:
+        min = max = data[0]
+        for number in data:
+            if number > max:
+                max = number
+            elif number < min:
+                min = number
+        return(min,max)
+
+
+mList = [45,11,56,30,90,22]
+min, max = minmax(mList)
+print('minimum is: {}'.format(min))
+print('maximum is: {}'.format(max))
+
+
+##############################################################################
+
